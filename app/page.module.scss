@@ -3,12 +3,14 @@
   background: var(--gray-blue);
 
   .container{
-    height: 59px;
+    height: 62px;
     display: flex;
     align-items: center;
+    overflow: hidden;
   }
 
   .stats-container{
+    flex-shrink: 0;
     p{
       color: #78818f;
       font-size: 16px;
@@ -51,6 +53,7 @@
       width: 218px;
       height: 62px;
       padding: 6px 10px;
+      min-width: 218px;
 
       img{
         height: 46px;
@@ -181,6 +184,7 @@
           display: flex;
           align-items: center;
           gap: 16px;
+          flex-wrap: wrap;
 
           .el{
             display: flex;
@@ -561,6 +565,7 @@
   align-items: center;
   flex-direction: column;
   margin: auto;
+  margin-bottom: 128px;
   max-width: 1920px;
   padding: 0 180px 160px 180px;
 
@@ -688,7 +693,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 360px;
+      min-width: 300px;
       border-radius: 8px;
       white-space: nowrap;
       padding: 0 20px;

@@ -8,29 +8,33 @@ export default function Inventory(){
   const [isInventoryShown, setIsInventoryShown] = useState(false);
   const [data, setData] = useState(null);
   const [isLoaderShown, setIsLoaderShown] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(null);
 
   async function fetchInventory(steamId) {
-    const response = await fetch(`/api/parser?steam_id=${steamId}`);
+    const response = await fetch(`/api/steam?steamId64=${steamId}`);
     const data = await response.json();
-    console.log(data);
     setData(data);
     setIsInventoryShown(true);
     setIsLoaderShown(false);
   }
 
   const getTotalPrice = ()=>{
-    const totalPrice = data.accumulate(item=>{
-      return item.price;
-    });
-    console.log(`TOTAL PRICE: ${totalPrice}`);
+    const totalSum = data.reduce((sum, item) => {
+      const price = parseFloat(item.price);
+      return sum + (isNaN(price) ? 0 : price);
+    }, 0);
+    setTotalPrice(Math.round(totalSum * 100) / 100)
   }
+
+  useEffect(() => {
+    data && getTotalPrice();
+  }, [data]);
 
   const buttonHandler = () => {
     setIsLoaderShown(true);
     const tradeURL = document.getElementById('trade-url').value;
     try {
       const steamID64 = getSteamID64FromTradeURL(tradeURL);
-      console.log(steamID64);
       fetchInventory(steamID64);
     } catch (error) {
       console.log('')
@@ -99,8 +103,8 @@ export default function Inventory(){
                             <div className={styles['items']}>
                               {data.map((item, id)=>{
                                 return (
-                                  <div key={`${item.title}-${id}`} className={styles['item']}>
-                                    <div style={{borderTopColor: item.color}} className={styles['item-container']}>
+                                  <div key={`${item.name}-${id}`} className={styles['item']}>
+                                    <div style={{borderTopColor: item.rarityColor}} className={styles['item-container']}>
                                       <div className={styles['header']}>{item.condition =='N/A' ? '' : item.condition}</div>
                                       <div className={styles['image-container']}>
                                         <div className={styles['image']}>
@@ -111,15 +115,15 @@ export default function Inventory(){
                                       <div className={styles['info']}>
                                         <div className={styles['info-container']}>
                                           <div className={styles['text']}>
-                                            <h3>{item.title}</h3>
-                                            <p>{item.title}</p>
+                                            <h3>{item.name.split('|')[0]}</h3>
+                                            <p>{item.name.split('|')[1] ?? ''}</p>
                                           </div>
                                         </div>
                                       </div>
                                       <div className={styles['select-button']}>
                                         <button>
                                           <span>
-                                            <p className={styles['price']}>{item.price}</p>
+                                            <p className={styles['price']}>{`${item.price != 'N/A' ? '$ '+item.price : 'N/A'}`}</p>
                                             <Image src={'/added-icon.svg'} alt={'add'} width={14} height={14}/>
                                           </span>
                                         </button>
@@ -140,7 +144,7 @@ export default function Inventory(){
                         <div className={styles['divider']}></div>
                         <div className={styles['price-block']}>
                           <p className={styles['price-subtitle']}>Average value</p>
-                          <h3 className={styles['price-title']}><span>$</span> 324.84</h3>
+                          <h3 className={styles['price-title']}><span>$</span> {totalPrice}</h3>
                           <button>Grab Your Money</button>
                         </div>
                       </div>

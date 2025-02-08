@@ -9,6 +9,13 @@ const nextConfig = {
         pathname: '**',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'steamcommunity-a.akamaihd.net',
+        port: '',
+        pathname: '**',
+        search: '',
+      },
     ],
   },
 };

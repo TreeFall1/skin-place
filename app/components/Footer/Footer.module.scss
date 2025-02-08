@@ -1,6 +1,10 @@
 .footer{
   background: linear-gradient(0deg,#1a1c26,#1a1c26),linear-gradient(170.22deg,rgba(255,110,72,.2) -168.68%,transparent 92.65%);
 
+  .mobile-container{
+    display: none;
+  }
+
   .footer-bottom{
     background-color: var(--gray-blue);
     display: flex;
@@ -185,18 +189,21 @@
 .drop-bar{
 
   .container{
-    height: 59px;
+    height: 62px;
     display: flex;
     align-items: center;
+    max-width: 980px;
+    overflow: hidden;
+    gap: 32px;
   }
 
   .stats-container{
+    flex-shrink: 0;
     p{
       color: #78818f;
       font-size: 16px;
       font-weight: 700;
       line-height: 130%;
-      margin-right: 36px;
     }
 
     .anim{
@@ -223,6 +230,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    overflow: hidden;
 
     .drop{
       border-radius: 8px;
@@ -234,6 +242,10 @@
       width: 218px;
       height: 62px;
       padding: 6px 10px;
+      flex: 1;
+      min-width: 218px;
+      position: relative;
+      overflow: hidden;
 
       img{
         height: 46px;
@@ -267,6 +279,79 @@
 
 @media screen and (max-width: 1366px) {
   .footer{
-    display: none;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #212330;
+    height: 80px;
+
+    .footer-container, .footer-bottom{
+      display: none;
+    }
+
+    .mobile-container{
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .sell-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        transition: 250ms;
+        border-radius: 14px;
+        background-color: var(--primary);
+        box-shadow: rgba(255, 110, 72, 0.12) 0 4px 4px;
+        position: absolute;
+        top: -8px;
+        z-index: 3;
+      }
+
+      ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-size: 11px;
+        color: #78818f;
+        font-weight: 700;
+
+        li{
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          height: 100%;
+          padding-bottom: 14px;
+          text-align: center;
+
+          img{
+            opacity: .5;
+          }
+
+          &:first-child{
+            color: #fafafa;
+            img{
+              opacity: 1;
+              filter: brightness(0) saturate(100%) invert(65%) sepia(23%) saturate(7486%) hue-rotate(328deg) brightness(99%) contrast(106%);
+            }
+          }
+
+          a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+          }
+        }
+      }
+    }
   }
 }

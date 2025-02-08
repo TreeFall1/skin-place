@@ -7,6 +7,28 @@ import {drops} from "@/app/tools/tools";
 export const Footer = () => {
   return (
       <footer className={styles['footer']}>
+        <div className={styles['mobile-container']}>
+          <Link href={'/sell'} className={styles['sell-button']}>
+            <Image src={'/bolt-white.svg'} alt={'Sell skins'} width={30} height={30} />
+          </Link>
+          <ul>
+            <li>
+              <Link href={'/'}>
+                <Image src={'/home.svg'} alt={'Home page'} width={30} height={30}/>
+                <p>Home</p>
+              </Link>
+            </li>
+            <li className={'pl-[10px]'}>
+              <p>Sell Skins</p>
+            </li>
+            <li>
+              <Link href={'/'}>
+                <Image src={'/chat-processing-headset.svg'} alt={'Support'} width={30} height={30}/>
+                <p>Support</p>
+              </Link>
+            </li>
+          </ul>
+        </div>
         <div className={styles['footer-container']}>
           <div className={styles['content']}>
             <div className={styles['logo-container']}>
@@ -31,7 +53,7 @@ export const Footer = () => {
                       <span className={styles['stats']}><div
                           className={`animate-pulse ${styles['anim']}`}/><p>56 880</p></span>
                     </div>
-                    <div className={styles['drops-container']}>
+                    <span className={styles['drops-container']}>
                       {drops.map((item, i) => {
                         return (
                             <div style={{borderTopColor: item.color}} key={item.title} className={styles['drop']}>
@@ -44,7 +66,7 @@ export const Footer = () => {
                             </div>
                         )
                       })}
-                    </div>
+                    </span>
                   </div>
                 </section>
               </div>
