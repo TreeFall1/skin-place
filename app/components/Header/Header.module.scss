@@ -1,0 +1,131 @@
+.header{
+  height: 92px;
+  background-color: var(--dark-indigo);
+  border-bottom: 1px solid #2b2c33;
+
+  .container{
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    justify-content: space-between;
+    height: 100%;
+
+    .logo{
+      height: 33px;
+      width: auto;
+    }
+
+    .logo-container{
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      button{
+        background: var(--dark-primary);
+        display: flex;
+        align-items: center;
+        height: 48px;
+        padding: 0 20px;
+        color: var(--primary);
+        background-color: var(--primary-dark);
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 8px;
+        min-width: 150px;
+        gap: 4px;
+        justify-content: center;
+      }
+
+      a{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    nav{
+      display: flex;
+      align-items: center;
+      color: #FAFAFA;
+
+      a{
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        gap: 10px;
+        margin: 0 12px;
+      }
+
+      .dropdown{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 12px;
+        border-radius: 8px;
+        border: 1px solid #242634;
+        padding: 0 12px 0 20px;
+        transition: 150ms;
+        font-size: 14px;
+        font-weight: 700;
+        gap: 4px;
+
+        &:first-of-type{
+          margin-right: 0;
+        }
+
+        &:hover{
+          background-color: #21232f;
+        }
+
+        img{
+          opacity: .5;
+        }
+      }
+      .reg-button{
+        background-color: var(--primary);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        gap: 4px;
+        border-radius: 8px;
+        padding: 0 20px;
+        transition: 150ms;
+        cursor: not-allowed;
+
+        &:hover{
+          background-color: #fd7b59;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1366px){
+    &{
+      height: 86px;
+    }
+    .container{
+      padding: 0 16px;
+      nav{
+        a, .dropdown{
+          display: none;
+        }
+
+        .reg-button{
+          font-size: 14px;
+          padding: 0px 8px;
+
+          span{
+            content: 'Register'
+          }
+        }
+      }
+
+      .logo-container{
+        button{
+          display: none;
+        }
+      }
+    }
+  }
+}
