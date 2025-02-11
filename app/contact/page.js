@@ -10,7 +10,7 @@ export default function Contact(){
             <Image src={'/text-gray.svg'} alt={'Contact us'} width={40} height={40} />
             <h1>Contact us</h1>
           </div>
-          <p>SkinPlace contacts - Contact us just now!</p>
+          <p>PriceX2 contacts - Contact us just now!</p>
         </div>
         <div className={styles['form']}>
           <h2 className={styles['form-title']}>Leave your Feedback and Suggestions</h2>
@@ -24,7 +24,7 @@ export default function Contact(){
           </div>
           <div className={styles['email-block']}>
             <p>For all your general inquiries and support needs</p>
-            <p>support@skin.place</p>
+            <p>support@price.x2</p>
           </div>
           <div className={styles['divider']}></div>
           <div className={styles['socials']}>
@@ -36,8 +36,8 @@ export default function Contact(){
               <li><a href="https://x.com/SkinPlaceOff" target="_blank"><Image src="/x.svg" alt="socials" width={24} height={24}/></a></li>
               <li><a href="https://www.tiktok.com/@skinplace8?_t=ZM-8tDx6N55EhR&_r=1" target="_blank"><Image src="/tiktok.svg" alt="socials" width={24} height={24}/></a></li>
               <li><a href="https://www.youtube.com/@SkinPlaceOfficial" target="_blank"><Image src="/youtube.svg" alt="socials" width={24} height={24}/></a></li>
-              <li><a href="https://www.facebook.com/people/Skin-Place/61550289076454/" target="_blank"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
-              <li><a href="https://www.trustpilot.com/review/skin.place" target="_blank"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
+              <li><a href="https://www.facebook.com/people/pricex2/61550289076454/" target="_blank"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
+              <li><a href="https://www.trustpilot.com/review/pricex2" target="_blank"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
               <li><a href="https://www.reddit.com/r/Skin_Place" target="_blank"><Image src={"/reddit.svg"} alt="socials" width={24} height={24}/></a></li>
             </ul>
           </div>

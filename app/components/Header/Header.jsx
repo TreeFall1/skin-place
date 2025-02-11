@@ -7,13 +7,13 @@ import {useEffect, useState} from "react";
 export const Header = ()=>{
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [logo, setLogo] = useState('/logo.svg');
+  const [logo, setLogo] = useState('/new-logo2.png');
   useEffect(() => {
     const updateImage = () => {
       if (window.innerWidth < 768) {
-        setLogo("/logo-orange.svg");
+        setLogo("/new-logo2.png");
       } else {
-        setLogo("/logo.svg");
+        setLogo("/new-logo2.png");
       }
     };
 
@@ -39,26 +39,49 @@ export const Header = ()=>{
    <header className={styles['header']}>
      {isMenuOpen && (
          <div className={styles['mobile-menu']}>
-           <ul>
-             <li><Link onClick={menuHandler} href={'/about'}>About us</Link></li>
-             <li><Link onClick={menuHandler} href={'/contact'}>Contact Us</Link></li>
-             <li>FAQ</li>
-             <li>Business Presentation</li>
-             <li>Is SkinPlace Legit</li>
-             <li>What Is SkinPlace</li>
-             <li><Link onClick={menuHandler} href={'/sell'}>Sell CS2 Skins</Link></li>
-             <li>Sell Dota 2 Skins</li>
-             <li>Sell Rust Skins</li>
-           </ul>
-           <div className={styles['dropdowns-container']}>
-             <button className={styles['dropdown']}>
-               <span>En</span>
-               <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
-             </button>
-             <button className={styles['dropdown']}>
-               <span>USD</span>
-               <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
-             </button>
+           <div className="">
+             <ul>
+               <li><Link onClick={menuHandler} href={'/about'}><Image src={'/x2.svg'} alt={'About Us'} width={22} height={22}/> About us</Link></li>
+               <li><Link onClick={menuHandler} href={'/contact'}><Image src={'/text-gray.svg'} alt={'Contact Us'} width={22} height={22}/>Contact Us</Link></li>
+               <li><Link onClick={menuHandler} href={'/faq'}><Image src={'/question-gray.svg'} alt={'FAQ'} width={22} height={22}/>FAQ</Link></li>
+               <li><Link onClick={menuHandler} href={'/inventory'}><Image src={'/commission.svg'} alt={'Check prices'} width={22} height={22}/>Check prices</Link></li>
+               <li><Image src={'/checked_list.svg'} alt={'Business'} width={22} height={22}/>Business Presentation</li>
+               <li><Image src={'/shield-100.svg'} alt={'Legit'} width={22} height={22}/>Is PriceX2 Legit</li>
+               <li><Image src={'/karambit.svg'} alt={'What is PriceX2'} width={22} height={22}/>What Is PriceX2</li>
+               <li><Link onClick={menuHandler} href={'/sell'}><Image src={'/csgo-outline.svg'} alt={'Sell CS2 Skins'} width={22} height={22}/>Sell CS2 Skins</Link></li>
+               <li><Image src={'/dota2-outline.svg'} alt={'Sell dota2 skins'} width={22} height={22}/>Sell Dota 2 Skins</li>
+               <li><Image src={'/rust-outline.svg'} alt={'Sell rust skins'} width={22} height={22}/>Sell Rust Skins</li>
+             </ul>
+             <div className={styles['dropdowns-container']}>
+               <button className={styles['dropdown']}>
+                 <span>En</span>
+                 <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
+               </button>
+               <button className={styles['dropdown']}>
+                 <span>USD</span>
+                 <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
+               </button>
+             </div>
+           </div>
+           <div className="">
+            <div className={styles['media-links']}>
+              <ul>
+                <li><a href="https://discord.gg/drmaQXmnnT" target="_blank"><Image src="/discord.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://t.me/+gNsCctWgpi1lY2M0" target="_blank"><Image src="/telegram.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://www.instagram.com/skinplaceoff/" target="_blank"><Image src="/instagram.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://x.com/SkinPlaceOff" target="_blank"><Image src="/x.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://www.tiktok.com/@skinplace8?_t=ZM-8tDx6N55EhR&_r=1" target="_blank"><Image src="/tiktok.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://www.youtube.com/@SkinPlaceOfficial" target="_blank"><Image src="/youtube.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://www.facebook.com/people/pricex2/61550289076454/" target="_blank"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://www.trustpilot.com/review/pricex2" target="_blank"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="https://www.reddit.com/r/Skin_Place" target="_blank"><Image src={"/reddit.svg"} alt="socials" width={24} height={24}/></a></li>
+              </ul>
+            </div>
+            <div className={styles['mobile-footer']}>
+              <p>PriceX2. All rights reserved</p>
+              <p>Terms Of Use | Privacy Policy | API Docs</p>
+              <p>Best trading service. Get your cash instantly</p>
+            </div>
            </div>
          </div>
      )}
@@ -66,7 +89,7 @@ export const Header = ()=>{
      <div className={styles['container']}>
        <div className={styles['logo-container']}>
          <Link onClick={closeModal} href={'/'}>
-           <Image className={styles['logo']} src={logo} alt={'skinplace'} height={33} width={512}/>
+           <Image className={styles['logo']} src={logo} alt={'PriceX2'} height={256} width={256}/>
          </Link>
          <button>
            <Link href={'/sell'}>
@@ -74,10 +97,13 @@ export const Header = ()=>{
              <span>Sell skins</span>
            </Link>
          </button>
+         <button>
+           <Link href={'/inventory'} className={styles['sell-button']}><Image src={'/commission.svg'} alt={'Check prices'} width={24} height={24} /> Check prices</Link>
+         </button>
        </div>
        <nav>
          <Link href="/about">
-           <Image src={'/logo-gray.svg'} alt={'About Us'} width={22} height={22}/>
+           <Image src={'/x2.svg'} alt={'About Us'} width={22} height={22}/>
            About Us
          </Link>
          <Link href="/faq">

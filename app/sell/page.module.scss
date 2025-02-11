@@ -66,7 +66,7 @@
           cursor: not-allowed;
 
           &:hover{
-            background-color: #fd7b59;
+            background-color: #4d84d5;
           }
         }
       }
@@ -278,7 +278,7 @@
         transition: 150ms;
 
         &:hover{
-          background: #ff7c59;
+          background: #4982d5;
         }
       }
     }
@@ -302,7 +302,7 @@
           margin-top: 5px;
           height: 51px;
           width: 51px;
-          filter: brightness(0) saturate(100%) invert(65%) sepia(23%) saturate(7486%) hue-rotate(328deg) brightness(99%) contrast(106%);
+          filter: var(--filter-primary-blue);
         }
 
         .title{
@@ -397,7 +397,7 @@
       padding: 30px 40px;
 
       img{
-        filter: brightness(0) saturate(100%) invert(65%) sepia(23%) saturate(7486%) hue-rotate(328deg) brightness(99%) contrast(106%);
+        filter: var(--filter-primary-blue);
         height: 64px;
         margin-bottom: 18px;
       }

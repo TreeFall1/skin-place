@@ -3,6 +3,10 @@ import axios from 'axios';
 
 const priceCache = new Map();
 
+const getCents = ()=>{
+  return Math.random()/100;
+}
+
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const steamId64 = searchParams.get('steamId64');
@@ -38,9 +42,10 @@ export async function GET(request) {
       const itemPriceData = skinportPrices.find((skin) => skin.market_hash_name === item.name);
       return {
         ...item,
-        price: itemPriceData ? `${itemPriceData.mean_price.toFixed(2)}` : 'N/A',
+        price: itemPriceData ? `${!itemPriceData.mean_price ? itemPriceData.suggested_price : itemPriceData.mean_price}` : 'N/A',
       };
     });
+
 
     return NextResponse.json(parsedInventory);
   } catch (error) {
@@ -58,6 +63,7 @@ async function getSkinportPrices() {
       app_id: 730,
       currency: 'USD'
     });
+
     const { data } = await axios.get(`https://api.skinport.com/v1/items?${params}`);
     data.forEach((item) => priceCache.set(item.market_hash_name, item));
     return data;

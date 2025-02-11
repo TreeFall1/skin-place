@@ -70,9 +70,13 @@
 :root {
     --background: #171821;
     --dark-indigo: #1c1d28;
-    --primary: #ff6e48;
-    --primary-dark: #402a2d;
+    /*--primary: #fb187b;*/
+    /*--primary-dark: #79003351;*/
+    --primary: #4288f1;
+    --primary-dark: #4288F12C;
     --gray-blue: #212330;
+    --filter-primary-magenta: brightness(0) saturate(100%) invert(24%) sepia(70%) saturate(6589%) hue-rotate(324deg) brightness(105%) contrast(97%);
+    --filter-primary-blue: brightness(0) saturate(100%) invert(53%) sepia(21%) saturate(1582%) hue-rotate(178deg) brightness(92%) contrast(106%);
 }
 
 *{

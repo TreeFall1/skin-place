@@ -7,16 +7,16 @@ export default function About(){
   return (
       <main className={styles['main']}>
         <div className={styles['header']}>
-          <Image src={'/logo-orange.svg'} alt={'SkinPlace logo'} width={40} height={40} />
+          <Image src={'/x2.svg'} alt={'PriceX2 logo'} width={40} height={40} />
           About us
         </div>
-        <div className={styles['skinplace']}>
-          <h1>Everything about <span className={'text-[var(--primary)]'}>Skin Place </span>- Who we are and what we offer?</h1>
+        <div className={styles['priceX2']}>
+          <h1>Everything about <span className={'text-[var(--primary)]'}>PriceX2 </span>- Who we are and what we offer?</h1>
           <p>We are a community of passionate gamers who understand the value of your CS2, Rust, and Dota 2 skins. Our journey began with a simple mission: to create a secure, instant, transparent, and efficient way for gamers to sell their skins for real money.</p>
         </div>
         <p className={styles['process']}>We've fine-tuned our process to make selling your skins as straight forward and fast as possible.</p>
         <div className={styles['benefits']}>
-          <h1><span className={'text-[var(--primary)]'}>Why</span> Skin Place?</h1>
+          <h1><span className={'text-[var(--primary)]'}>Why</span> PriceX2?</h1>
           <div className={styles['container']}>
             <div className={styles['item']}>
               <div className={styles['title-container']}>
@@ -48,7 +48,7 @@ export default function About(){
         </div>
         <div className={styles['trust']}>
           <h1><span className={'text-[var(--primary)]'}>Your Trust is </span> Our Success</h1>
-          <p>We strive every day to earn and retain your trust. Join the Skin Place community today and experience the hassle-free, secure way to sell your gaming skins.</p>
+          <p>We strive every day to earn and retain your trust. Join the PriceX2 community today and experience the hassle-free, secure way to sell your gaming skins.</p>
           <div className={styles['button-container']}>
             <button><span><Link href={'/sell'}>Start Selling Now</Link></span></button>
           </div>

@@ -1,0 +1,37 @@
+.main{
+  margin: 0 auto 128px;
+  max-width: 1366px;
+  color: #FAFAFA;
+  padding: 0 16px;
+}
+
+.header{
+  margin-top: 40px;
+  text-align: center;
+
+  h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 40px;
+    font-weight: 700;
+
+    img{
+      filter: var(--filter-primary-blue);
+    }
+  }
+
+  p{
+    font-weight: 700;
+    color: #78818f;
+  }
+}
+
+.container{
+  margin-top: 32px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

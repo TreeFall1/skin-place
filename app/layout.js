@@ -4,7 +4,7 @@ import {Footer} from "@/app/components/Footer/Footer";
 
 export const metadata = {
   title: "Sell CS2 Skins Instantly for Real Money | Fast & Secure Transactions",
-  description: "SKINPLACE",
+  description: "PriceX2",
 };
 
 export default function RootLayout({ children }) {

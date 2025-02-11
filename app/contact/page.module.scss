@@ -17,7 +17,7 @@
       justify-content: center;
 
       img{
-        filter: brightness(0) saturate(100%) invert(65%) sepia(23%) saturate(7486%) hue-rotate(328deg) brightness(99%) contrast(106%);
+        filter: var(--filter-primary-blue);
       }
 
       h1{
@@ -37,7 +37,7 @@
   }
 
   .form{
-    background: radial-gradient(68.41% 68.41% at 50% 136.46%,rgba(255,110,72,.35) 0,transparent 100%),#1a1c26;
+    background: radial-gradient(68.41% 68.41% at 50% 136.46%, rgba(16, 118, 220, 0.35) 0,transparent 100%),#1a1c26;
     border-radius: 8px;
     padding: 40px 0 27px;
     margin: 8px;
@@ -168,7 +168,7 @@
 
         li{
           align-items: center;
-          background: #ff6e4826;
+          background: var(--primary-dark);
           border-radius: 8px;
           display: flex;
           height: 48px;
