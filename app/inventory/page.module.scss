@@ -9,15 +9,15 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 32px auto 64px auto;
+  margin: 16px auto 64px auto;
   max-width: 1560px;
 
   .title{
     display: flex;
     align-items: flex-end;
-    margin-bottom: 60px;
+    margin-bottom: 32px;
     color: #FAFAFA;
-    font-size: 70px;
+    font-size: 64px;
     font-weight: 700;
     letter-spacing: -2.45;
     line-height: 120%;
@@ -25,7 +25,7 @@
 
     h2{
       align-items: center;
-      gap: 14px;
+      column-gap: 14px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -513,6 +513,7 @@
         letter-spacing: normal;
         max-width: 438px;
         line-height: 80%;
+        margin-bottom: 16px;
 
         img{
           display: none;

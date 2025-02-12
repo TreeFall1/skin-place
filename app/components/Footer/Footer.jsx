@@ -82,15 +82,15 @@ export const Footer = () => {
                   </div>
                   <div className={styles['media-links']}>
                     <ul>
-                      <li><a href="https://discord.gg/drmaQXmnnT" target="_blank"><Image src="/discord.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://t.me/+gNsCctWgpi1lY2M0" target="_blank"><Image src="/telegram.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://www.instagram.com/skinplaceoff/" target="_blank"><Image src="/instagram.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://x.com/SkinPlaceOff" target="_blank"><Image src="/x.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://www.tiktok.com/@skinplace8?_t=ZM-8tDx6N55EhR&_r=1" target="_blank"><Image src="/tiktok.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://www.youtube.com/@SkinPlaceOfficial" target="_blank"><Image src="/youtube.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://www.facebook.com/people/pricex2/61550289076454/" target="_blank"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://www.trustpilot.com/review/pricex2" target="_blank"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
-                      <li><a href="https://www.reddit.com/r/Skin_Place" target="_blank"><Image src={"/reddit.svg"} alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/discord.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/telegram.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/instagram.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/x.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/tiktok.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/youtube.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
+                      <li><a href="#" target="_blank"><Image src={"/reddit.svg"} alt="socials" width={24} height={24}/></a></li>
                     </ul>
                   </div>
                 </div>
