@@ -66,15 +66,15 @@ export const Header = ()=>{
            <div className="">
             <div className={styles['media-links']}>
               <ul>
-                <li><a href="#" target="_blank"><Image src="/discord.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/telegram.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/instagram.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/x.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/tiktok.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/youtube.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
-                <li><a href="#" target="_blank"><Image src={"/reddit.svg"} alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/discord.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/telegram.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/instagram.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/x.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/tiktok.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/youtube.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/facebook.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src="/trustpilot.svg" alt="socials" width={24} height={24}/></a></li>
+                <li><a href="#"><Image src={"/reddit.svg"} alt="socials" width={24} height={24}/></a></li>
               </ul>
             </div>
             <div className={styles['mobile-footer']}>

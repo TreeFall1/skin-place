@@ -51,7 +51,6 @@
       min-width: 280px;
       border-radius: 8px;
       white-space: nowrap;
-      padding: 0 20px;
       font-size: 16px;
       height: 60px;
       font-weight: 700;
@@ -67,8 +66,12 @@
 
       a{
         display: flex;
-        width: fit-content;
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
         gap: 4px;
+        padding: 0 20px;
       }
     }
   }
@@ -262,7 +265,6 @@
         min-width: 360px;
         border-radius: 8px;
         white-space: nowrap;
-        padding: 0 20px;
         height: 60px;
         font-size: 16px;
         font-weight: 700;
@@ -270,6 +272,15 @@
         position: relative;
         background: var(--primary);
         transition: 150ms;
+
+        a{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 20px;
+        }
 
         &:hover{
           background: #588cdc;

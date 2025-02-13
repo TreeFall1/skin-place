@@ -164,11 +164,11 @@ export default function Home() {
               </div>
             </div>
             <div className={styles['button-container']}>
-              <button>Try now</button>
+              <button><Link href={'/sell'}>Try now</Link></button>
             </div>
           </div>
           <div className={styles['mobile-button']}>
-            <button>Try now</button>
+            <button><Link href={'/sell'}>Try now</Link></button>
           </div>
         </section>
         <section className={styles['statistics-section']}>
