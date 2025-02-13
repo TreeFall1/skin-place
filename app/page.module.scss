@@ -618,20 +618,31 @@
     margin-bottom: 32px;
 
     .mobile-button{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 300px;
-      border-radius: 8px;
-      white-space: nowrap;
-      padding: 0 20px;
-      height: 60px;
-      font-size: 16px;
-      font-weight: 700;
-      overflow: hidden;
-      position: relative;
-      background: var(--primary);
-      transition: all .15s;
+      display: block;
+      button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 300px;
+        border-radius: 8px;
+        white-space: nowrap;
+        height: 60px;
+        font-size: 16px;
+        font-weight: 700;
+        overflow: hidden;
+        position: relative;
+        background: var(--primary);
+        transition: all .15s;
+
+        a{
+          display: flex;
+          height: 100%;
+          width: 100%;
+          padding: 0 20px;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
 
     h2{
