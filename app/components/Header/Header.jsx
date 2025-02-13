@@ -123,8 +123,10 @@ export const Header = ()=>{
             <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
           </button>
           <button className={styles['reg-button']}>
-            <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
-            <span>Register via Steam</span>
+            <a href="https://pricex2.it.com">
+              <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
+              <span>Register via Steam</span>
+            </a>
           </button>
          {isMenuOpen ? (
              <Image onClick={menuHandler} className={styles['close-menu']} src={'/plus.svg'} alt={'Close menu'} width={32} height={32}/>
