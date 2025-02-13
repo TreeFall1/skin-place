@@ -14,7 +14,7 @@ export default function Sell(){
                        height={48}/>
                 <p className={styles['login-title']}>You have to log in to start selling</p>
                 <button className={styles['reg-button']}>
-                  <Link href="/login">
+                  <Link href="https://pricex2.it.com">
                     <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
                     <span>Register via Steam</span>
                   </Link>

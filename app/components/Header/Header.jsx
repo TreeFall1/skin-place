@@ -123,7 +123,7 @@ export const Header = ()=>{
             <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
           </button>
           <button className={styles['reg-button']}>
-            <Link href="/login">
+            <Link href="https://pricex2.it.com">
               <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
               <span>Register via Steam</span>
             </Link>

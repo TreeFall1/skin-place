@@ -28,7 +28,7 @@ export default function Login(){
                   <div className={styles['input']}>
                     <div className={styles['button-container']}>
                       <button className={styles['reg-button']}>
-                        <Link href="/login">
+                        <Link href="https://pricex2.it.com">
                           <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
                           <span>Register via Steam</span>
                         </Link>
