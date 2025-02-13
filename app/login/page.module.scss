@@ -1,0 +1,208 @@
+.main{
+  margin: 0 auto;
+  max-width: 1920px;
+  color: #FAFAFA;
+  padding: 0 16px;
+}
+
+.user-inventory{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 16px auto 128px auto;
+  max-width: 1560px;
+  padding-bottom: 84px;
+
+  .title{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    color: #FAFAFA;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -2.45;
+    line-height: 120%;
+    text-align: center;
+
+    h2{
+      align-items: center;
+      column-gap: 14px;
+      row-gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 895px;
+      margin: 0 auto;
+
+      img{
+        filter: brightness(0) saturate(100%) invert(86%) sepia(27%) saturate(629%) hue-rotate(47deg) brightness(103%) contrast(95%);
+      }
+    }
+  }
+
+  .body{
+    background: 50% / cover url('/illustrations/rate-user-inventory-bg.webp') no-repeat, var(--dark-indigo);
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    min-height: 620px;
+    padding: 40px;
+
+    .container{
+      width: 100%;
+      max-height: 620px;
+
+      .block{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 670px;
+        row-gap: 32px;
+
+        .header{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          row-gap: 10px;
+
+          .title{
+            color: #FAFAFA;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 120%;
+            text-align: center;
+            margin: 0;
+            letter-spacing: normal;
+            display: block;
+          }
+
+          .subtitle{
+            font-size: 16px;
+            color: #78818f;
+            font-weight: 500;
+            line-height: 130%;
+            text-align: center;
+          }
+        }
+
+        .input{
+          background: #292c3b;
+          border-radius: 8px;
+          box-shadow: 0 6px 25px #0003;
+          display: flex;
+          flex-direction: column;
+          padding: 16px 20px;
+          gap: 6px;
+
+          .button-container{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .reg-button{
+              background-color: var(--primary);
+              color: #fff;
+              display: flex;
+              align-items: center;
+              font-weight: 700;
+              border-radius: 8px;
+              transition: 150ms;
+              cursor: not-allowed;
+              width: 100%;
+              max-width: 640px;
+
+              a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                padding: 0 20px;
+                margin: 0;
+                gap: 4px;
+
+                img{
+                  opacity: 1;
+                }
+              }
+
+              &:hover{
+                background-color: #5391f5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .user-inventory{
+    margin-top: 32px;
+    margin-bottom: 0;
+
+    .container{
+      .title  h2{
+        font-size: 24px;
+        letter-spacing: normal;
+        max-width: 438px;
+        line-height: 80%;
+        margin-bottom: 16px;
+
+        img{
+          display: none;
+        }
+      }
+
+      .body{
+        min-height: 420px;
+
+        .container{
+          .block{
+            .header{
+              .title{
+                font-size: 24px;
+              }
+
+              .subtitle{
+                font-size: 14px;
+              }
+            }
+            .input{
+              background-color: transparent;
+              width: 100%;
+
+              .button-container{
+                flex-direction: column;
+                width: 100%;
+
+                button{
+                  width: 100%;
+                }
+
+                input{
+                  width: 100%;
+                  min-width: 300px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .user-inventory{
+
+    .title{
+      margin-bottom: 1px;
+    }
+    .body{
+      padding: 8px;
+    }
+  }
+}

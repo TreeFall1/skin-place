@@ -44,7 +44,7 @@ export const Header = ()=>{
                <li><Link onClick={menuHandler} href={'/about'}><Image src={'/x2.svg'} alt={'About Us'} width={22} height={22}/> About us</Link></li>
                <li><Link onClick={menuHandler} href={'/contact'}><Image src={'/text-gray.svg'} alt={'Contact Us'} width={22} height={22}/>Contact Us</Link></li>
                <li><Link onClick={menuHandler} href={'/faq'}><Image src={'/question-gray.svg'} alt={'FAQ'} width={22} height={22}/>FAQ</Link></li>
-               <li><Link onClick={menuHandler} href={'/inventory'}><Image src={'/commission.svg'} alt={'Check prices'} width={22} height={22}/>Check prices</Link></li>
+               <li><Link onClick={menuHandler} href={'/login'}><Image src={'/commission.svg'} alt={'Check prices'} width={22} height={22}/>Check prices</Link></li>
                <li><Image src={'/checked_list.svg'} alt={'Business'} width={22} height={22}/>Business Presentation</li>
                <li><Image src={'/shield-100.svg'} alt={'Legit'} width={22} height={22}/>Is PriceX2 Legit</li>
                <li><Image src={'/karambit.svg'} alt={'What is PriceX2'} width={22} height={22}/>What Is PriceX2</li>
@@ -98,7 +98,7 @@ export const Header = ()=>{
            </Link>
          </button>
          <button>
-           <Link href={'/inventory'} className={styles['sell-button']}><Image src={'/commission.svg'} alt={'Check prices'} width={24} height={24} /> Check prices</Link>
+           <Link href={'/login'} className={styles['sell-button']}><Image src={'/commission.svg'} alt={'Check prices'} width={24} height={24} /> Check prices</Link>
          </button>
        </div>
        <nav>
@@ -123,10 +123,10 @@ export const Header = ()=>{
             <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
           </button>
           <button className={styles['reg-button']}>
-            <a href="https://pricex2.it.com">
+            <Link href="/login">
               <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
               <span>Register via Steam</span>
-            </a>
+            </Link>
           </button>
          {isMenuOpen ? (
              <Image onClick={menuHandler} className={styles['close-menu']} src={'/plus.svg'} alt={'Close menu'} width={32} height={32}/>

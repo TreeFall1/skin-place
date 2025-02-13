@@ -1,6 +1,6 @@
 import styles from './page.module.scss'
 import Image from "next/image";
-
+import Link from "next/link";
 
 export default function Sell(){
   return(
@@ -14,10 +14,10 @@ export default function Sell(){
                        height={48}/>
                 <p className={styles['login-title']}>You have to log in to start selling</p>
                 <button className={styles['reg-button']}>
-                  <a href="https://pricex2.it.com">
+                  <Link href="/login">
                     <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
                     <span>Register via Steam</span>
-                  </a>
+                  </Link>
                 </button>
               </div>
             </div>

@@ -132,6 +132,13 @@
           margin: 0;
           gap: 4px;
 
+          &:hover{
+            img{
+              opacity: 1;
+              filter: none;
+            }
+          }
+
           img{
             opacity: 1;
           }
