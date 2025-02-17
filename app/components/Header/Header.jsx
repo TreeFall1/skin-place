@@ -3,11 +3,15 @@ import styles from './Header.module.scss'
 import Image from "next/image";
 import Link from "next/link";
 import {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
+import LanguageChanger from "@/app/components/LanguageChanger";
 
 export const Header = ()=>{
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [logo, setLogo] = useState('/new-logo2.png');
+
+
   useEffect(() => {
     const updateImage = () => {
       if (window.innerWidth < 768) {
@@ -23,6 +27,7 @@ export const Header = ()=>{
     return () => window.removeEventListener("resize", updateImage);
   }, []);
 
+
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';
   }, [isMenuOpen]);
@@ -35,36 +40,37 @@ export const Header = ()=>{
     setIsMenuOpen(false);
   }
 
+
+
   return(
    <header className={styles['header']}>
      {isMenuOpen && (
          <div className={styles['mobile-menu']}>
            <div className="">
              <ul>
-               <li><Link onClick={menuHandler} href={'/about'}><Image src={'/x2.svg'} alt={'About Us'} width={22} height={22}/> About us</Link></li>
-               <li><Link onClick={menuHandler} href={'/contact'}><Image src={'/text-gray.svg'} alt={'Contact Us'} width={22} height={22}/>Contact Us</Link></li>
-               <li><Link onClick={menuHandler} href={'/faq'}><Image src={'/question-gray.svg'} alt={'FAQ'} width={22} height={22}/>FAQ</Link></li>
-               <li><Link onClick={menuHandler} href={'/login'}><Image src={'/commission.svg'} alt={'Check prices'} width={22} height={22}/>Check prices</Link></li>
-               <li><Image src={'/checked_list.svg'} alt={'Business'} width={22} height={22}/>Business Presentation</li>
-               <li><Image src={'/shield-100.svg'} alt={'Legit'} width={22} height={22}/>Is PriceX2 Legit</li>
-               <li><Image src={'/karambit.svg'} alt={'What is PriceX2'} width={22} height={22}/>What Is PriceX2</li>
-               <li><Link onClick={menuHandler} href={'/sell'}><Image src={'/csgo-outline.svg'} alt={'Sell CS2 Skins'} width={22} height={22}/>Sell CS2 Skins</Link></li>
-               <li><Image src={'/dota2-outline.svg'} alt={'Sell dota2 skins'} width={22} height={22}/>Sell Dota 2 Skins</li>
-               <li><Image src={'/rust-outline.svg'} alt={'Sell rust skins'} width={22} height={22}/>Sell Rust Skins</li>
+               <li><Link onClick={menuHandler} href={'/about'}><Image src={'/x2.svg'} alt={'About Us'} width={22} height={22}/>{t('aboutUs')}</Link></li>
+               <li><Link onClick={menuHandler} href={'/contact'}><Image src={'/text-gray.svg'} alt={'Contact Us'} width={22} height={22}/>{t('contactUs')}</Link></li>
+               <li><Link onClick={menuHandler} href={'/faq'}><Image src={'/question-gray.svg'} alt={'FAQ'} width={22} height={22}/>{t('faq')}</Link></li>
+               <li><Link onClick={menuHandler} href={'/login'}><Image src={'/commission.svg'} alt={'Check prices'} width={22} height={22}/>{t('headerCheckBtn')}</Link></li>
+               <li><Image src={'/checked_list.svg'} alt={'Business'} width={22} height={22}/>{t('headerBusiness')}</li>
+               <li><Image src={'/shield-100.svg'} alt={'Legit'} width={22} height={22}/>{t('headerLegit')}</li>
+               <li><Image src={'/karambit.svg'} alt={'What is PriceX2'} width={22} height={22}/>{t('headerWhatIs')}</li>
+               <li><Link onClick={menuHandler} href={'/sell'}><Image src={'/csgo-outline.svg'} alt={'Sell CS2 Skins'} width={22} height={22}/>{t('headerCS')}</Link></li>
+               <li><Image src={'/dota2-outline.svg'} alt={'Sell dota2 skins'} width={22} height={22}/>{t('headerDota')}</li>
+               <li><Image src={'/rust-outline.svg'} alt={'Sell rust skins'} width={22} height={22}/>{t('headerRust')}</li>
              </ul>
              <div className={styles['dropdowns-container']}>
+               <LanguageChanger />
                <button className={styles['dropdown']}>
-                 <span>En</span>
-                 <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
-               </button>
-               <button className={styles['dropdown']}>
-                 <span>USD</span>
-                 <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
+                 <span className={styles['current-el']}>
+                   <span>USD</span>
+                   <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
+                 </span>
                </button>
              </div>
            </div>
            <div className="">
-            <div className={styles['media-links']}>
+             <div className={styles['media-links']}>
               <ul>
                 <li><a href="#"><Image src="/discord.svg" alt="socials" width={24} height={24}/></a></li>
                 <li><a href="#"><Image src="/telegram.svg" alt="socials" width={24} height={24}/></a></li>
@@ -78,9 +84,9 @@ export const Header = ()=>{
               </ul>
             </div>
             <div className={styles['mobile-footer']}>
-              <p>PriceX2. All rights reserved</p>
-              <p>Terms Of Use | Privacy Policy | API Docs</p>
-              <p>Best trading service. Get your cash instantly</p>
+              <p>{t('headerRights')}</p>
+              <p>{t('headerTerms')}</p>
+              <p>{t('headerTitle')}</p>
             </div>
            </div>
          </div>
@@ -94,38 +100,37 @@ export const Header = ()=>{
          <button>
            <Link href={'/sell'}>
              <Image src={'/bolt.svg'} alt={'sell skins'} width={24} height={24}/>
-             <span>Sell skins</span>
+             <span>{t('headerSellBtn')}</span>
            </Link>
          </button>
          <button>
-           <Link href={'/login'} className={styles['sell-button']}><Image src={'/commission.svg'} alt={'Check prices'} width={24} height={24} /> Check prices</Link>
+           <Link href={'/login'} className={styles['sell-button']}><Image src={'/commission.svg'} alt={'Check prices'} width={24} height={24} /> {t('headerCheckBtn')}</Link>
          </button>
        </div>
        <nav>
          <Link href="/about">
            <Image src={'/x2.svg'} alt={'About Us'} width={22} height={22}/>
-           About Us
+           {t('aboutUs')}
          </Link>
          <Link href="/faq">
            <Image src={'/question-gray.svg'} alt={'FAQ'} width={22} height={22}/>
-           FAQ
+           {t('faq')}
          </Link>
          <Link href="/contact">
            <Image src={'/text-gray.svg'} alt={'Contact Us'} width={22} height={22}/>
-            Contact Us
+           {t('contactUs')}
           </Link>
-          <button className={styles['dropdown']}>
-            <span>En</span>
-            <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
-          </button>
-          <button className={styles['dropdown']}>
-            <span>USD</span>
-            <Image src={'/menu-down.svg'} alt={'Change language'} width={24} height={24}/>
-          </button>
-          <button className={styles['reg-button']}>
-            <Link href="https://pricex2.it.com">
-              <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
-              <span>Register via Steam</span>
+         <LanguageChanger />
+         <button className={styles['dropdown']}>
+            <span className={styles['current']}>
+              <span>USD</span>
+              <Image src={'/menu-down.svg'} alt={'Change currency'} width={24} height={24}/>
+            </span>
+         </button>
+         <button className={styles['reg-button']}>
+           <Link href="https://pricex2.it.com">
+             <Image src={'/steam.svg'} alt={'Register via Steam'} width={24} height={24}/>
+              <span>{t('headerRegBtn')}</span>
             </Link>
           </button>
          {isMenuOpen ? (

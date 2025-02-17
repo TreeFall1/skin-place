@@ -1,15 +1,18 @@
+'use client'
 import {drops} from "@/app/tools/tools";
 import Image from "next/image";
 import stylesH from './Drops.module.scss'
 import stylesF from './Drops-footer.module.scss'
+import {useTranslation} from "react-i18next";
 
 export const Drops = (props)=>{
+  const { t } = useTranslation();
   const styles = props.styles === 'footer' ? stylesF : stylesH;
   return (
       <section className={styles['drop-bar']}>
         <div className={styles['container']}>
           <div className={styles['stats-container']}>
-            <p>Top 7 days</p>
+            <p>{t('home:drops')}</p>
             <span className={styles['stats']}><div className={`animate-pulse ${styles['anim']}`}/><p>$ 43,841</p></span>
           </div>
           <div className={styles['drops-container']}>

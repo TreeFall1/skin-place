@@ -1,10 +1,14 @@
+'use client'
 import styles from './Footer.module.scss'
 import Image from "next/image";
 import Link from "next/link";
 import {Drops} from "@/app/components/Drops/Drops";
+import {useTranslation} from "react-i18next";
 
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
       <footer className={styles['footer']}>
         <div className={styles['mobile-container']}>
@@ -15,16 +19,16 @@ export const Footer = () => {
             <li>
               <Link href={'/'}>
                 <Image src={'/home.svg'} alt={'Home page'} width={30} height={30}/>
-                <p>Home</p>
+                <p>{t('footer:mobileNavHome')}</p>
               </Link>
             </li>
             <li className={'pl-[10px]'}>
-              <p>Sell Skins</p>
+              <p>{t('footer:mobileNavSell')}</p>
             </li>
             <li>
               <Link href={'/'}>
                 <Image src={'/chat-processing-headset.svg'} alt={'Support'} width={30} height={30}/>
-                <p>Support</p>
+                <p>{t('footer:mobileNavSupport')}</p>
               </Link>
             </li>
           </ul>
@@ -36,11 +40,11 @@ export const Footer = () => {
                 <Image src={'/new-logo.png'} alt={'PriceX2'} width={512} height={512} />
               </Link>
               <div className={styles['letter-container']}>
-                <h3 className={styles['title']}>Sign in for our Newsletter</h3>
-                <p className={styles['subtitle']}>Want to get more special offers? Leave your email!</p>
+                <h3 className={styles['title']}>{t('footer:mailTitle')}</h3>
+                <p className={styles['subtitle']}>{t('footer:mailSubtitle')}</p>
                 <div className={styles['input-container']}>
                   <input placeholder={'E-mail'} type="text"/>
-                  <button>Send</button>
+                  <button>{t('footer:mailButton')}</button>
                 </div>
               </div>
             </div>
@@ -51,22 +55,22 @@ export const Footer = () => {
               <div className={styles['link-container']}>
                 <div className={styles['site-links']}>
                   <ul>
-                    <li>Service</li>
-                    <li><Link href={'/sell'}>Sell Skins</Link></li>
-                    <li>Bonus System</li>
-                    <li>Referral Program</li>
-                    <li>Sell CS2 Skins</li>
-                    <li>Sell Dota 2 Skins</li>
-                    <li>Sell Rust Skins</li>
+                    <li>{t('footer:servicesTitle')}</li>
+                    <li><Link href={'/sell'}>{t('footer:mobileNavSell')}</Link></li>
+                    <li>{t('footer:bonus')}</li>
+                    <li>{t('footer:referral')}</li>
+                    <li>{t('home:headerCS')}</li>
+                    <li>{t('home:headerDota')}</li>
+                    <li>{t('home:headerRust')}</li>
                   </ul>
                   <ul>
-                    <li>Product</li>
-                    <li>Business Presentation</li>
-                    <li><Link href={'/faq'}>FAQ</Link></li>
-                    <li><Link href={'/about'}>About Us</Link></li>
-                    <li><Link href={'/contact'}>Contact Us</Link></li>
-                    <li>Is PriceX2 Legit</li>
-                    <li>What is PriceX2</li>
+                    <li>{t('footer:productTitle')}</li>
+                    <li>{t('home:headerBusiness')}</li>
+                    <li><Link href={'/faq'}>{t('home:faq')}</Link></li>
+                    <li><Link href={'/about'}>{t("home:aboutUs")}</Link></li>
+                    <li><Link href={'/contact'}>{t('home:contactUs')}</Link></li>
+                    <li>{t('home:headerLegit')}</li>
+                    <li>{t('home:headerWhatIs')}</li>
                   </ul>
                 </div>
                 <div className={styles['socials']}>
@@ -77,7 +81,7 @@ export const Footer = () => {
                     <Image src={'/chat-processing-headset.svg'} alt={'tech support'} width={36} height={36}/>
                     <div className={styles['text']}>
                       <p className={styles['tech-title']}>support@price.x2</p>
-                      <p className={styles['tech-subtitle']}>Technical support</p>
+                      <p className={styles['tech-subtitle']}>{t('footer:techSupport')}</p>
                     </div>
                   </div>
                   <div className={styles['media-links']}>
@@ -100,11 +104,8 @@ export const Footer = () => {
         </div>
         <div className={styles['footer-bottom']}>
           <div className={styles['bottom-container']}>
-            <p>© PriceX2. All rights reserved. Look our
-              Terms of Service |
-              Api docs |
-              Privacy policy</p>
-            <p>Best trading service. Get your cash instantly</p>
+            <p>© PriceX2. {t('footer:bottomText')}</p>
+            <p>{t('footer:bottomTitle')}</p>
           </div>
         </div>
       </footer>
