@@ -19,20 +19,26 @@ export default function LanguageChanger() {
 
   const handleChange = (e) => {
     const newLocale = e.target.innerText.toLowerCase();
-
-    // Устанавливаем новый язык
     i18n.changeLanguage(newLocale);
     setCurrentLocale(newLocale);
-
-    // Записываем куку для Next.js
     document.cookie = `NEXT_LOCALE=${newLocale};path=/;max-age=2592000`; // 30 дней
 
     setIsLangMenuOpen(false);
-
-    // Перенаправляем
-    const newPath = currentPathname.replace(`/${currentLocale}`, `/${newLocale}`);
+    let newPath;
+    if (currentPathname === "/") {
+      newPath = `/${newLocale}`;
+    } else {
+      newPath = currentPathname.replace(`/${currentLocale}`, `/${newLocale}`);
+    }
     router.push(newPath);
+
+    setTimeout(()=>{
+      router.refresh()
+    }, 100)
   };
+
+
+
 
   const menuHandler = ()=>{
     setIsLangMenuOpen(!isLangMenuOpen);

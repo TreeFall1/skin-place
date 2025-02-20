@@ -8,43 +8,6 @@ import axios from "axios";
 
 export const Loader = () => {
   const [isLoaderShown, setIsLoaderShown] = useState(true);
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    const checkAPI = async () => {
-      try {
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 2000); // Тайм-аут 2 сек
-
-        const response = await fetch("/api/check", {
-          method: "GET",
-          signal: controller.signal, // Прерываем запрос при зависании
-        });
-
-        clearTimeout(timeout);
-
-        if (!response.ok) throw new Error(); // Если статус не 200 — ошибка
-
-        const data = await response.json();
-
-        if (data.status === "active") {
-          setIsActive(true); // Только если { status: "active" }
-        } else {
-          setIsActive(false);
-        }
-      } catch {
-        setIsActive(false); // Если API упало, просто false (без ошибок в консоли)
-      }
-    };
-
-    checkAPI();
-  }, []);
-
-  useEffect(() => {
-    if(isActive){
-      document.body.style.display = "none";
-    }
-  }, [isActive]);
 
   useEffect(() => {
     const state = sessionStorage.getItem("loaderState");

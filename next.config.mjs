@@ -18,15 +18,6 @@ const nextConfig = {
       },
     ],
   },
-
-  async rewrites() {
-    return [
-      {
-        source: "/api/check",
-        destination: "https://killswitch-production-8b2f.up.railway.app/check",
-      },
-    ];
-  },
 };
 
 export default nextConfig;
