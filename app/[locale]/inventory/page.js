@@ -4,6 +4,7 @@ import Image from "next/image";
 import {useEffect, useState} from "react";
 import {getSteamID64FromTradeURL} from "@/app/tools/tools";
 import {useTranslation} from "react-i18next";
+import {ItemCard} from "@/app/components/itemCard/ItemCard";
 
 export default function Inventory(){
   const {t} = useTranslation('inventory');
@@ -105,33 +106,7 @@ export default function Inventory(){
                             <div className={styles['items']}>
                               {data.map((item, id)=>{
                                 return (
-                                  <div key={`${item.name}-${id}`} className={styles['item']}>
-                                    <div style={{borderTopColor: item.rarityColor}} className={styles['item-container']}>
-                                      <div className={styles['header']}>{item.condition =='N/A' ? '' : item.condition}</div>
-                                      <div className={styles['image-container']}>
-                                        <div className={styles['image']}>
-                                          <Image src={item.image} alt={'item image'} width={140}
-                                                 height={105}/>
-                                        </div>
-                                      </div>
-                                      <div className={styles['info']}>
-                                        <div className={styles['info-container']}>
-                                          <div className={styles['text']}>
-                                            <h3>{item.name.split('|')[0]}</h3>
-                                            <p>{item.name.split('|')[1] ?? ''}</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className={styles['select-button']}>
-                                        <button>
-                                          <span>
-                                            <p className={styles['price']}>{`${item.price != 'N/A' ? '$ '+item.price : 'N/A'}`}</p>
-                                            <Image src={'/added-icon.svg'} alt={'add'} width={14} height={14}/>
-                                          </span>
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <ItemCard key={`${name}-${id}`} name={item.name} price={item.price} condition={item.condition} rarityColor={item.rarityColor} image={item.image} />
                                 )
                               })}
                             </div>

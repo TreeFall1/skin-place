@@ -250,9 +250,235 @@ export const faq = {
       answer: '是的，您可以将账户余额提现到您的账户。'
     }
   ]
-
-
 }
+
+export const marketItems = [
+  {
+    name: '★ Butterfly Knife | Gamma Doppler Phase 1',
+    condition: 'FN',
+    price: '3953.52',
+    rarityColor: rarityColors.ancient,
+    image: '/market/151309_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Gamma Doppler Phase 4',
+    condition: 'FN',
+    price: '3777.80',
+    rarityColor: rarityColors.ancient,
+    image: '/market/151309_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Fade',
+    condition: 'FN',
+    price: '3749.24',
+    rarityColor: rarityColors.ancient,
+    image: '/market/11081_s.png'
+  },
+  {
+    name: '★ ST™ Butterfly Knife | Doppler Phase 4',
+    condition: 'FN',
+    price: '3748.72',
+    rarityColor: rarityColors.ancient,
+    image: '/market/99113_s.png'
+  },
+  {
+    name: 'AUG | Akihabara Accept',
+    condition: 'FN',
+    price: '3744.84',
+    rarityColor: rarityColors.ancient,
+    image: '/market/12994_s.png'
+  },
+  {
+    name: '★ ST™ Butterfly Knife | Doppler Phase 3',
+    condition: 'FN',
+    price: '3669.09',
+    rarityColor: rarityColors.ancient,
+    image: '/market/99113_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Doppler Phase 3',
+    condition: 'MW',
+    price: '3666.23',
+    rarityColor: rarityColors.ancient,
+    image: '/market/99113_s.png'
+  },
+  {
+    name: 'AWP | Gungnir',
+    condition: 'FN',
+    price: '7825.94',
+    rarityColor: rarityColors.ancient,
+    image: '/market/13013_s.png'
+  },
+  {
+    name: '★ ST™ Butterfly Knife | Gamma Doppler Phase 4',
+    condition: 'FN',
+    price: '3601.98',
+    rarityColor: rarityColors.ancient,
+    image: '/market/151309_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Gamma Doppler Phase 3',
+    condition: 'FN',
+    price: '3530.24',
+    rarityColor: rarityColors.ancient,
+    image: '/market/151309_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Doppler Phase 3',
+    condition: 'FN',
+    price: '3519.00',
+    rarityColor: rarityColors.ancient,
+    image: '/market/99113_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Fade',
+    condition: 'MW',
+    price: '3460.47',
+    rarityColor: rarityColors.ancient,
+    image: '/market/11081_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Doppler Ruby',
+    condition: 'FN',
+    price: '22950.00',
+    rarityColor: rarityColors.ancient,
+    image: '/market/99050_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Doppler Sapphire',
+    condition: 'FN',
+    price: '13974.82',
+    rarityColor: rarityColors.ancient,
+    image: '/market/99113_s.png'
+  },
+  {
+    name: 'AK-47 | Wild Lotus',
+    condition: 'FT',
+    price: '9916.55',
+    rarityColor: rarityColors.ancient,
+    image: '/market/145531_s.png'
+  },
+  {
+    name: '★ ST™ Butterfly Knife | Doppler Phase 2',
+    condition: 'FN',
+    price: '8772.00',
+    rarityColor: rarityColors.ancient,
+    image: '/market/98974_s.png'
+  },
+  {
+    name: 'AWP | Gungnir',
+    condition: 'BS',
+    price: '7825.94',
+    rarityColor: rarityColors.ancient,
+    image: '/market/145540_s.png'
+  },
+  {
+    name: 'AWP | Dragon Lore',
+    condition: 'FT',
+    price: '7657.98',
+    rarityColor: rarityColors.ancient,
+    image: '/market/10943_s.png'
+  },
+  {
+    name: 'M4A4 | Howl',
+    condition: 'FN',
+    price: '7403.87',
+    rarityColor: rarityColors.immortal,
+    image: '/market/10539_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Doppler Phase 2',
+    condition: 'FN',
+    price: '6827.64',
+    rarityColor: rarityColors.ancient,
+    image: '/market/98974_s.png'
+  },
+  {
+    name: '★ ST™ M4A4 | Howl',
+    condition: 'FT',
+    price: '6302.31',
+    rarityColor: rarityColors.immortal,
+    image: '/market/10539_s.png'
+  },
+  {
+    name: '★ Sport Gloves | Hedge Maze',
+    condition: 'FT',
+    price: '6269.08',
+    rarityColor: rarityColors.ancient,
+    image: '/market/16437_s.png'
+  },
+  {
+    name: 'AWP | Medusa',
+    condition: 'FN',
+    price: '5936.40',
+    rarityColor: rarityColors.ancient,
+    image: '/market/13013_s.png'
+  },
+  {
+    name: 'AWP | Dragon Lore',
+    condition: 'BS',
+    price: '5935.75',
+    rarityColor: rarityColors.ancient,
+    image: '/market/10943_s.png'
+  },
+  {
+    name: '★ Sport Gloves | Pandora’s Box',
+    condition: 'FT',
+    price: '5931.23',
+    rarityColor: rarityColors.ancient,
+    image: '/market/16511_s.png'
+  },
+  {
+    name: '★ M4A4 | Howl',
+    condition: 'MW',
+    price: '5914.06',
+    rarityColor: rarityColors.immortal,
+    image: '/market/10539_s.png'
+  },
+  {
+    name: '★ Sport Gloves | Pandora’s Box',
+    condition: 'WW',
+    price: '5885.39',
+    rarityColor: rarityColors.ancient,
+    image: '/market/16511_s.png'
+  },
+  {
+    name: '★ Specialist Gloves | Crimson Kimono',
+    condition: 'MW',
+    price: '5471.66',
+    rarityColor: rarityColors.ancient,
+    image: '/market/16492_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Gamma Doppler Phase 2',
+    condition: 'FN',
+    price: '4926.16',
+    rarityColor: rarityColors.ancient,
+    image: '/market/151309_s.png'
+  },
+  {
+    name: '★ Sport Gloves | Omega',
+    condition: 'FT',
+    price: '4620.50',
+    rarityColor: rarityColors.ancient,
+    image: '/market/41714_s.png'
+  },
+  {
+    name: '★ Butterfly Knife | Lore',
+    condition: 'FN',
+    price: '4024.20',
+    rarityColor: rarityColors.ancient,
+    image: '/market/151155_s.png'
+  },
+  {
+    name: '★ Sport Gloves | Vice',
+    condition: 'MW',
+    price: '4023.88',
+    rarityColor: rarityColors.ancient,
+    image: '/market/39408_s.png'
+  }
+].sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+
 
 
 export function getSteamID64FromTradeURL(tradeURL) {
