@@ -22,19 +22,21 @@
     .logo{
       height: 64px;
       width: auto;
-      margin-right: 24px;
+      margin-right: 16px;
     }
 
     .logo-container{
       display: flex;
       align-items: center;
+      gap: 10px;
 
       button{
+        text-wrap: nowrap;
         background: var(--dark-primary);
         display: flex;
         align-items: center;
         height: 48px;
-        padding: 0 20px;
+        padding: 0 16px;
         color: var(--primary);
         background-color: var(--primary-dark);
         font-weight: 700;
@@ -43,10 +45,6 @@
         min-width: 150px;
         gap: 4px;
         justify-content: center;
-
-        &:first-of-type{
-          margin-right: 12px;
-        }
 
         img{
           filter: var(--filter-primary-blue)
@@ -376,7 +374,7 @@
 
           a{
             font-size: 12px;
-            padding: 0px 8px;
+            padding: 0 8px;
           }
         }
       }
